@@ -1,6 +1,6 @@
 "use client";
 
-import { useCreateCartItem, useProductData } from "@/hooks/useProductData";
+import { useProductData } from "@/hooks/useProductData";
 import ProductCard from "./ProductCard/ProductCard";
 import { useMutationState } from "@tanstack/react-query";
 
