@@ -4,8 +4,10 @@ import Image from "next/image";
 import styles from './Header.module.scss';
 import React, { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import { useCartItem } from "@/hooks/useCartData";
 
 export default function Header() {
+  const { data: cartItems } = useCartItem()
   const [isOpen, setIsOpen] = useState(false)
   return ( 
     <>
@@ -16,7 +18,7 @@ export default function Header() {
         </div>
         <div className={styles.cartWrapper} onClick={() => setIsOpen(prevState => !prevState)}>
           <Image src={'/vector.png'} alt="Cart icon" width={200} height={200} className={styles.cartIcon} />
-          <span className={styles.cartAmmount}>0</span>
+          <span className={styles.cartAmmount}>{cartItems?.length}</span>
         </div>
       </header>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
