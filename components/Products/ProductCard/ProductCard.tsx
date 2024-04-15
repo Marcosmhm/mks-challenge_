@@ -36,7 +36,7 @@ export default function ProductCard({ product }: Props) {
         >
           <button>
             <Image
-              src={"/shopping-bag.png"}
+              src={"/icons/shopping-bag.png"}
               width={200}
               height={200}
               alt="bag icon"

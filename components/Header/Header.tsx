@@ -17,7 +17,7 @@ export default function Header() {
           <h2>Sistemas</h2>
         </div>
         <div className={styles.cartWrapper} onClick={() => setIsOpen(prevState => !prevState)}>
-          <Image src={'/vector.png'} alt="Cart icon" width={200} height={200} className={styles.cartIcon} />
+          <Image src={'/icons/vector.png'} alt="Cart icon" width={200} height={200} className={styles.cartIcon} />
           <span className={styles.cartAmmount}>{cartItems?.length}</span>
         </div>
       </header>
