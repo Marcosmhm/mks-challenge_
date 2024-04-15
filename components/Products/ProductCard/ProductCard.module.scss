@@ -1,0 +1,72 @@
+.productWrapper {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+
+  img {
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .productFlex {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 15px;
+    min-height: 60px;
+  }
+
+  .productName {
+    font-weight: 1rem;
+    line-height: 19px;
+    font-weight: 400;
+  }
+
+  .productPrice {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #373737;
+  }
+
+  .productDescription {
+    padding: 0 15px;
+    font-size: 0.7rem;
+    color: #2C2C2C;
+    min-height: 70px;
+    max-height: 70px;
+  }
+
+  .productBuyWrapper {
+    background-color: #0F52BA;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: #0F52BA;
+      color: #fff;
+      font-weight: 600;
+      margin: 0 auto;
+      gap: 10px;
+
+      .bagIcon {
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+}

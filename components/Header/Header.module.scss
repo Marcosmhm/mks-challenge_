@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0F52BA;
+  padding: 10px 25px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 5px;
+
+  h1 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}
+
+.cartWrapper {
+  display: flex;
+  align-items: flex-end;
+  background-color: #fff;
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 8px;
+
+  .cartIcon {
+    max-width: 24px;
+    height: auto;
+  }
+
+  .cartAmmount {
+    font-weight: 900;
+  }
+}
