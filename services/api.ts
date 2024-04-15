@@ -16,7 +16,6 @@ export const getCartItems = async () => {
 }
 
 export const updateMockCart = async (product: ProductType) => {
-  console.log(cartItems)
     const productIndex = cartItems.findIndex(item => item.id === product.id);
     if (productIndex !== -1) {
       cartItems[productIndex] = {...cartItems[productIndex]};
@@ -30,7 +29,7 @@ export const updateMockCart = async (product: ProductType) => {
 export const mockCart = async (product: ProductType) => {
   const productIndex = cartItems.findIndex(item => item.id === product.id);
   if (productIndex !== -1) {
-    cartItems[productIndex] = {...cartItems[productIndex] , quantity: product.quantity++};
+    cartItems[productIndex] = {...cartItems[productIndex], quantity: cartItems[productIndex].quantity + 1};
   } else {
     return cartItems.push({...product, quantity: 1})
   }
