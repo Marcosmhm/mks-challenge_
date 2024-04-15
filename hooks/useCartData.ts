@@ -9,7 +9,6 @@ export function useCreateCartItem() {
     mutationFn: (product: ProductType) => mockCart(product),
     mutationKey: ['add-cart-item'],
     onSettled: async (_, error) => {
-      console.log("settled");
       if (error) {
         console.log(error);
       } else {
@@ -29,7 +28,6 @@ export function useUpdateCartItem() {
   const query = useMutation({
     mutationFn: (product: ProductType) => updateMockCart(product),
     onSettled: async (_, error, variables) => {
-      console.log("settled");
       if (error) {
         console.log(error);
       } else {
