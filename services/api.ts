@@ -28,6 +28,10 @@ export const updateMockCart = async (product: ProductType) => {
 }
 
 export const mockCart = async (product: ProductType) => {
-
-  return cartItems.push({...product, quantity: 1})
+  const productIndex = cartItems.findIndex(item => item.id === product.id);
+  if (productIndex !== -1) {
+    cartItems[productIndex] = {...cartItems[productIndex] , quantity: product.quantity++};
+  } else {
+    return cartItems.push({...product, quantity: 1})
+  }
 }
