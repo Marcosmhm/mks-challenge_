@@ -5,7 +5,6 @@ import { useCartItem, useUpdateCartItem } from "@/hooks/useCartData";
 import styles from "./Sidebar.module.scss";
 import Image from "next/image";
 import { ProductType } from "@/types/Product";
-import closeCart from '@/public/icons/close_cart.png'
 
 type Props = {
   isOpen: boolean,
@@ -39,7 +38,7 @@ export default function Sidebar({ isOpen, setIsOpen }: Props) {
       <div className={styles.cartFlex}>
         <h3 className={styles.cartTitle}>Carrinho de compras</h3>
         <div onClick={() => setIsOpen(prevState => !prevState)}>
-          <Image src={closeCart} width={200} height={200} alt="close cart icon" className={styles.closeCartIcon} /> 
+          <Image src={'/icons/close_cart.png'} width={200} height={200} alt="close cart icon" className={styles.closeCartIcon} /> 
         </div>
       </div>
 
