@@ -10,6 +10,11 @@ import styles from './Header.module.scss';
 export default function Header() {
   const { data: cartItems } = useCartItem()
   const [isOpen, setIsOpen] = useState(false)
+
+  const cartAmmount = cartItems?.reduce((accumulator, product) => {
+    return accumulator + Number(product.quantity);
+  }, 0);
+
   return ( 
     <>
       <header role="heading" className={styles.header}>
@@ -19,7 +24,7 @@ export default function Header() {
         </div>
         <div className={styles.cartWrapper} onClick={() => setIsOpen(prevState => !prevState)}>
           <Image src={'/icons/vector.png'} alt="Cart icon" width={200} height={200} className={styles.cartIcon} />
-          <span className={styles.cartAmmount}>{cartItems?.length}</span>
+          <span className={styles.cartAmmount}>{cartAmmount}</span>
         </div>
       </header>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
