@@ -24,21 +24,24 @@ export default function Products() {
       </div>
     );
 
-    if (isError)
-      return (
-        <div>
-          <h2>Occoreu um erro inesperado!</h2>
-        </div>
-      )
+  if (isError)
+    return (
+      <div>
+        <h2>Occoreu um erro inesperado!</h2>
+      </div>
+    );
+
   return (
     <>
       {mutationState?.status === "success" && (
         <div className={styles.success}>Produto adicionado ao carrinho!</div>
       )}
       {mutationState?.status === "error" && (
-        <div className={styles.error}>Ocorreu um erro ao adicionar produto ao carrinho</div>
+        <div className={styles.error}>
+          Ocorreu um erro ao adicionar produto ao carrinho
+        </div>
       )}
-      
+
       <div className={styles.productsWrapper}>
         {products?.map((product, index) => (
           <ProductCard product={product} key={`${product.id} ${index}`} />

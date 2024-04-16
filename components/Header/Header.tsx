@@ -1,10 +1,11 @@
 'use client'
 
-import Image from "next/image";
-import styles from './Header.module.scss';
 import React, { useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import Image from "next/image";
+
+import Sidebar from "@/components/Sidebar/Sidebar";
 import { useCartItem } from "@/hooks/useCartData";
+import styles from './Header.module.scss';
 
 export default function Header() {
   const { data: cartItems } = useCartItem()

@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 import { ProductType } from "@/types/Product";
+import { useCreateCartItem } from "@/hooks/useCartData";
 import styles from "./ProductCard.module.scss";
-import { useCreateCartItem } from "@/hooks/useCartData"; 
 
 type Props = {
   product: ProductType;
@@ -16,6 +16,7 @@ export default function ProductCard({ product }: Props) {
   const handleCartAdd = (product: ProductType) => {
     createCartItem(product);
   };
+
   return (
     <>
       <div className={styles.productWrapper}>
