@@ -107,3 +107,12 @@
     justify-self: flex-end;
   }
 }
+
+@media (max-width: 500px) {
+  .productPrice {
+    background-color: #373737;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+}
