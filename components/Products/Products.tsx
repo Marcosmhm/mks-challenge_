@@ -43,7 +43,6 @@ export default function Products() {
       )}
 
       <div className={styles.productsWrapper}>
-        Outro teste para branch e pr 2
         {products?.map((product, index) => (
           <ProductCard product={product} key={`${product.id} ${index}`} />
         ))}
