@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, setIsOpen }: Props) {
       className={styles.sidebar}
     >
       <div className={styles.cartFlex}>
-        <h3 className={styles.cartTitle}>Commit para testar branch e pull request 3</h3>
+        <h3 className={styles.cartTitle}>Carrinho de compras</h3>
         <div onClick={() => setIsOpen((prevState) => !prevState)}>
           <Image
             src={"/icons/close_cart.png"}
